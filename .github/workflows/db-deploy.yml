@@ -9,7 +9,6 @@ jobs:
   db-deploy:
     name: db-deploy
     runs-on: ubuntu-latest
-    container: liquibase/liquibase
 
     steps:
     - uses: azure/login@v1
@@ -19,12 +18,29 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
                 
-    - name: RunLiquibase
-      run: | 
-          liquibase \
-          --changeLogFile=db_files/changelogs/changelog2.sql \
-          --url="jdbc:sqlserver://$DB_SERVER_NAME.database.windows.net:1433;database=$DB_DB_NAME" \
-          --username="$DB_USER_NAME" \
-          --password="$DB_PASSWORD" \
-          status
+#     - name: RunLiquibase
+#       run: | 
+#           liquibase \
+#           --changeLogFile=db_files/changelogs/changelog2.sql \
+#           --url="jdbc:sqlserver://$DB_SERVER_NAME.database.windows.net:1433;database=$DB_DB_NAME" \
+#           --username="$DB_USER_NAME" \
+#           --password="$DB_PASSWORD" \
+#           status
+          
+    - name: Liquibase Github Action
+      # You may pin to the exact commit or the version.
+      # uses: liquibase/liquibase-github-action@480ea2b6ba0026b980ae81f459286ca80f2bf75f
+      uses: liquibase/liquibase-github-action@v1
+      with:
+        # Operation to run
+        operation: status
+        # Name of Change Log File
+        changeLogFile: db_files/changelogs/changelog2.sql
+        # Database Username
+        username: "$DB_USER_NAME"
+        # Database Password
+        password: "$DB_PASSWORD"
+        # Database URL
+        url: "jdbc:sqlserver://$DB_SERVER_NAME.database.windows.net:1433;database=$DB_DB_NAME"          
+
 
