@@ -22,7 +22,6 @@ jobs:
         run: |
           pwd
           ls -ltra
-          liquibase --help
                 
 #     - name: RunLiquibase
 #       run: | 
