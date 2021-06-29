@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches: 
-      - main
+      - add-master-changelog
       
 jobs:
   db-deploy:
@@ -39,7 +39,7 @@ jobs:
           # Path to Change Log directory
           classpath: 'db_files'
           # Name of Change Log File
-          changeLogFile: 'changelogs/changelog3.json'
+          changeLogFile: 'changelogs/changelog_master.xml'
           # Database Username
           username: ${{ secrets.DB_USER_NAME }}
           # Database Password
