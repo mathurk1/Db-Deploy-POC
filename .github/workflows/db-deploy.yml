@@ -37,9 +37,9 @@ jobs:
           # Operation to run
           operation: update
           # Path to Change Log directory
-          classpath: 'db_files/changelogs'
+          classpath: 'db_files'
           # Name of Change Log File
-          changeLogFile: 'changelog2.sql'
+          changeLogFile: 'changelogs/changelog3.json'
           # Database Username
           username: ${{ secrets.DB_USER_NAME }}
           # Database Password

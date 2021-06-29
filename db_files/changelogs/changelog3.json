@@ -19,9 +19,9 @@
                      "comments":"A String",
                      "dbms":"mssql",
                      "encoding":"UTF-8",
-                     "path":"../stored_proc/str_proc1.sql",
+                     "path":"./stored_proc/str_proc1.sql",
                      "procedureName":"str_proc1",
-                     "relativeToChangelogFile":true,
+                     "relativeToChangelogFile":false,
                      "replaceIfExists":true,
                      "schemaName":"dbo"
                   }
