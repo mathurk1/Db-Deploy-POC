@@ -8,12 +8,12 @@ on:
 jobs:
   db-deploy:
     name: db-deploy
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
-    steps:
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+     steps:
+#     - uses: azure/login@v1
+#       with:
+#         creds: ${{ secrets.AZURE_CREDENTIALS }}
         
     - name: Checkout
       uses: actions/checkout@v2
