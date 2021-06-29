@@ -44,8 +44,8 @@ jobs:
           # Name of Change Log File
           changeLogFile: 'changelog2.sql'
           # Database Username
-          username: "$DB_USER_NAME"
+          username: ${{ secrets.DB_USER_NAME }}
           # Database Password
-          password: "$DB_PASSWORD"
+          password: ${{ secrets.DB_PASSWORD }}
           # Database URL
-          url: "$DB_URL"          
+          url: ${{ secrets.DB_URL }}
