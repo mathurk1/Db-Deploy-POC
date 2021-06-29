@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - main
+      
+jobs:
+  db-deploy:
+    name: db-deploy
+    runs-on: ubuntu-latest
+    container: liquibase/liquibase
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+        
