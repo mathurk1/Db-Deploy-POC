@@ -33,9 +33,11 @@ jobs:
         uses: liquibase/liquibase-github-action@v1
         with:
           # Operation to run
-          operation: status
+          operation: update
+          # Path to Change Log directory
+          classpath: db_files/changelogs
           # Name of Change Log File
-          changeLogFile: db_files/changelogs/changelog2.sql
+          changeLogFile: changelog2.sql
           # Database Username
           username: "$DB_USER_NAME"
           # Database Password
