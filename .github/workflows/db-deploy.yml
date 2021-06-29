@@ -17,6 +17,12 @@ jobs:
         
       - name: Checkout
         uses: actions/checkout@v2
+        
+      - name: debug
+        run: |
+          pwd
+          ls -ltra
+          liquibase --help
                 
 #     - name: RunLiquibase
 #       run: | 
@@ -35,7 +41,7 @@ jobs:
           # Operation to run
           operation: update
           # Path to Change Log directory
-          classpath: db_files/changelogs
+          classpath: ./db_files/changelogs
           # Name of Change Log File
           changeLogFile: changelog2.sql
           # Database Username
