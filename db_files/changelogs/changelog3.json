@@ -1,28 +1,33 @@
-"databaseChangeLog": [
-  {
-    "preConditions": [
-      {
-        "runningAs": {
-          "username": "liquibaseadmin"
-        }
-      }
-    ]
-  },
 {
-  "changeSet":  {
-    "id": "1",
-    "author": "liquibaseadmin",
-    "changes": [{
-      "createProcedure": {
-        "comments": "A String",
-        "dbms": "mssql",
-        "encoding": "UTF-8",
-        "path": "../stored_proc/str_proc1.sql",
-        "procedureName": "str_proc1",
-        "relativeToChangelogFile": true,
-        "replaceIfExists": true,
-        "schemaName": "dbo"
+   "databaseChangeLog":[
+      {
+         "preConditions":[
+            {
+               "runningAs":{
+                  "username":"liquibaseadmin"
+               }
+            }
+         ]
+      },
+      {
+         "changeSet":{
+            "id":"1",
+            "author":"liquibaseadmin",
+            "changes":[
+               {
+                  "createProcedure":{
+                     "comments":"A String",
+                     "dbms":"mssql",
+                     "encoding":"UTF-8",
+                     "path":"../stored_proc/str_proc1.sql",
+                     "procedureName":"str_proc1",
+                     "relativeToChangelogFile":true,
+                     "replaceIfExists":true,
+                     "schemaName":"dbo"
+                  }
+               }
+            ]
+         }
       }
-    }]
-  }
+   ]
 }
