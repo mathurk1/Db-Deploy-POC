@@ -7,7 +7,7 @@
         "comments": "A String",
         "dbms": "mssql",
         "encoding": "UTF-8",
-        "path": "com/example/my-logic.sql",
+        "path": "../stored_proc/str_proc1.sql",
         "procedureName": "str_proc1",
         "relativeToChangelogFile": true,
         "replaceIfExists": true,
