@@ -14,4 +14,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-        
+                
+    - name: RunLiquibase
+      run: | 
+          liquibase \
+          --changeLogFile=db_files/changelogs/changelog2.sql \
+          --url="jdbc:sqlserver://{{ secrets.DB_SERVER_NAME }}.database.windows.net:1433;database={{ secrets.DB_DB_NAME }}" \
+          --username={{ secrets.DB_USER_NAME }} \
+          --password={{ secrets.DB_PASSWORD }} \
+          status –verbose
+
