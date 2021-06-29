@@ -35,14 +35,14 @@ jobs:
       - name: Liquibase Github Action
         # You may pin to the exact commit or the version.
         # uses: liquibase/liquibase-github-action@480ea2b6ba0026b980ae81f459286ca80f2bf75f
-        uses: liquibase/liquibase-github-action@v1
+        uses: liquibase/liquibase-github-action@v2
         with:
           # Operation to run
           operation: update
           # Path to Change Log directory
-          classpath: ./db_files/changelogs
+          classpath: 'db_files/changelogs'
           # Name of Change Log File
-          changeLogFile: changelog2.sql
+          changeLogFile: 'changelog2.sql'
           # Database Username
           username: "$DB_USER_NAME"
           # Database Password
