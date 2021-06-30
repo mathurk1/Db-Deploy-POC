@@ -11,3 +11,4 @@ SET NOCOUNT ON
     SELECT getdate();
  
 END
+GO
