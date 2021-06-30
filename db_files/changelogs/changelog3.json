@@ -1,5 +1,14 @@
-{ "databaseChangeLog": [
-    "changeLogId":"stored-proc1",
+{
+    "databaseChangeLog": [
+	{
+	  "preConditions": [
+	    {
+         "sqlCheck": {
+	       "expectedResult": 1,
+	       "sql": "select count(*) from DATABASECHANGELOGLOCK"
+		 }
+	   }
+	 ],
     "changeSet": {
         "id": "1",
         "author": "liquibaseadmin",
