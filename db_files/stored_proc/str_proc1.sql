@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE [dbo].[str_proc1]
+CREATE PROCEDURE [dbo].[str_proc1]
 AS
 BEGIN
 SET NOCOUNT ON
