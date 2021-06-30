@@ -24,3 +24,4 @@ As for the content inside procedures.xml, we can code the equivalent of
 
 </changeSet>
 ```
+Reference: https://stackoverflow.com/questions/39989749/liquibase-stored-procs-management
