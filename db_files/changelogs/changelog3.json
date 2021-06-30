@@ -13,7 +13,7 @@
                     "relativeToChangelogFile": false,
                     "replaceIfExists": true,
                     "schemaName": "dbo"
-	    }
-        }]
+            }
+	}]
     }
 }
