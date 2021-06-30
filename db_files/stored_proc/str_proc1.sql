@@ -8,4 +8,3 @@ SET NOCOUNT ON
     from dbo.test_table
  
 END
-GO
