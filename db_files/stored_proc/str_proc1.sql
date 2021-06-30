@@ -7,6 +7,7 @@ SET NOCOUNT ON
     select * 
     from dbo.test_table;
     
+    -- add select current date time
     SELECT getdate();
  
 END
