@@ -13,6 +13,7 @@
          "changeSet":{
             "id":"1",
             "author":"liquibaseadmin",
+            "runOnChange": true,
             "changes":[
                {
                   "createProcedure":{
